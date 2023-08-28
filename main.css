@@ -1,0 +1,78 @@
+body{
+    background-color: #000;
+}
+
+/* CLOCK CONTAINER */
+.clockContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: "digital", sans-serif;
+    font-size: 20px;
+
+}
+
+
+.clock{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #000;
+    color: #ffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#timeDisplay{
+    font-size: 23px;
+    margin-top: 60px;
+}
+
+#dateDisplay {
+    font-size: 15px;
+}
+
+.ring {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    bottom: -4px;
+    left: -4px;
+    border: 4px solid transparent;
+    border-radius: 50%;
+    animation: colorChangeAnimation 10s infinite linear;
+    box-shadow: 0 0 6px 3px rgba(255, 0, 0, 0.9);
+  }
+  
+  @keyframes colorChangeAnimation {
+    0% {
+      border-color: red;
+      box-shadow: 0 0 6px 3px rgba(255, 0, 0, 0.8);
+    }
+    25% {
+      border-color: blue;
+      box-shadow: 0 0 6px 3px rgba(0, 0, 255, 0.8);
+    }
+    50% {
+      border-color: green;
+      box-shadow: 0 0 6px 3px rgba(0, 255, 0, 0.8);
+    }
+    75% {
+      border-color: yellow;
+      box-shadow: 0 0 6px 3px rgba(255, 255, 0, 0.8);
+    }
+    100% {
+      border-color: red;
+      box-shadow: 0 0 6px 3px rgba(255, 0, 0, 0.8);
+    }
+  }
+
+  @font-face {
+    font-family: "digital";
+    src: url("./font.ttf");
+  }
